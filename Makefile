@@ -7,9 +7,7 @@ all:
 	cd python; make
 
 clean:
-	cd cpp/build; make clean
-	cd cpp/tests/build; make clean
-	cd python/build; make clean
 	rm -rf cpp/build
 	rm -rf cpp/tests/build
 	rm -rf python/build
+	rm -rf cpp_ivp_src/build
