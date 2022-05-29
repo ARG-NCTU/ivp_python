@@ -36,11 +36,11 @@ docker run \
     -v "/etc/localtime:/etc/localtime:ro" \
     -v "/dev:/dev" \
     -v "/var/run/docker.sock:/var/run/docker.sock" \
-    -w "/home/arg/oop-python-nycu" \
+    -w "/home/arg/ivp_python" \
     --user "root:root" \
     --name oop \
     --network host \
     --privileged \
     --security-opt seccomp=unconfined \
-    argnctu/oop:latest \
+    argnctu/ivp-python:latest \
     $BASH_OPTION

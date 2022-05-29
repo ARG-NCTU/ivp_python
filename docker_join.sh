@@ -2,7 +2,7 @@
 
 BASH_OPTION=bash
 
-IMG=argnctu/oop:latest
+IMG=argnctu/ivp-python:latest
 
 xhost +
 containerid=$(docker ps -aqf "ancestor=${IMG}") && echo $containerid
