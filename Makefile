@@ -2,9 +2,9 @@
  # wget http://oceanai.mit.edu/cpplabs/lab06/Makefile                                                      
 
 all: 
-	cd cpp/build; make; make install
+	cd cpp/build; make  
 	cd cpp/tests/build; make
-	cd pybind11/build; make; make install
+	cd pybind11/build; make
 
 clean:
 	rm -rf cpp/build
