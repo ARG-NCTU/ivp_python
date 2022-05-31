@@ -131,6 +131,10 @@ ENDIF("${USE_UTM}" STREQUAL "ON")
 
 # If the environment hasn't explicitly set 'IVP_LIB_DIRECTORY', give it a good
 # default value...
+
+set(IVP_INC_DIRECTORY "/usr/local/include")
+set(IVP_LIB_DIRECTORY "/usr/local/lib/")
+
 IF("${IVP_LIB_DIRECTORY}" STREQUAL "")
    # IVP_SOURCE_DIRECTORY is defined by CMake, because this project's name is
    # IVP.
@@ -304,23 +308,27 @@ ENDFOREACH(L)
 #ENDIF("${IVP_BUILD_GUI_CODE}" STREQUAL "ON")
 #
 #
-## If the environment hasn't explicitly set 'IVP_BIN_DIRECTORY', give it a good
-## default value...
-#IF("${IVP_BIN_DIRECTORY}" STREQUAL "")
-#   # IVP_SOURCE_DIRECTORY is defined by CMake, because this project's name is
-#   # IVP.
-#   GET_FILENAME_COMPONENT(IVP_BIN_DIRECTORY "${IVP_SOURCE_DIR}/../../bin" ABSOLUTE)
-#ENDIF("${IVP_BIN_DIRECTORY}" STREQUAL "")
-#
+# If the environment hasn't explicitly set 'IVP_BIN_DIRECTORY', give it a good
+# default value...
+IF("${IVP_BIN_DIRECTORY}" STREQUAL "")
+   # IVP_SOURCE_DIRECTORY is defined by CMake, because this project's name is
+   # IVP.
+   GET_FILENAME_COMPONENT(IVP_BIN_DIRECTORY "${IVP_SOURCE_DIR}/../../bin" ABSOLUTE)
+ENDIF("${IVP_BIN_DIRECTORY}" STREQUAL "")
+
 #FOREACH(A ${IVP_APPS_TO_BUILD})
 #  SET( EXECUTABLE_OUTPUT_PATH "${IVP_BIN_DIRECTORY}" CACHE PATH "" FORCE )
 #  ADD_SUBDIRECTORY(${A})
 #ENDFOREACH(A)
-#
-##=============================================================================
-## make install (tes 2012-05-08)
-##=============================================================================
-#
+
+#=============================================================================
+# make install (tes 2012-05-08)
+#=============================================================================
+
+message("Bin directory: ${IVP_BIN_DIRECTORY}")
+message("Include directory: ${IVP_INC_DIRECTORY}")
+message("Lib directory: ${IVP_LIB_DIRECTORY}")
+
 #install(DIRECTORY ${IVP_BIN_DIRECTORY}/ DESTINATION ${CMAKE_INSTALL_PREFIX}/bin 
 #  FILE_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE )
 #install(DIRECTORY ${IVP_LIB_DIRECTORY}/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
