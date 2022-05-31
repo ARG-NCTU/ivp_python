@@ -1,15 +1,3 @@
-To compile all tests
-```
-make
-```
-
-To run all tests
-```
-./alltest.sh
-```
-
-The cmake bin has been currently set to /usr/local/bin; perhaps use other bin path set to ~/.bashrc
-
 
 ================================
 Testers:
