@@ -3,9 +3,9 @@
 This repo is to set up the pybind11 for the IvP libraries in [MOOS-IvP](https://oceanai.mit.edu/ivpman/pmwiki/pmwiki.php)
 
 In particular we make a copy of parts of the ivp source files:
-* ivp/src/lib_geometry
-* ivp/src/lib_mbutils
-* ivp/src_unit_tests/
+* pyivp/src/lib_geometry
+* pyivp/src/lib_mbutils
+* pyivp/src_unit_tests/
 
 We intented to use pybind11 to create
 * ivp/pybind11/
