@@ -19,9 +19,9 @@ project(automobile)
 include_directories("${CMAKE_SOURCE_DIR}/cpp/include/automobile_bits")
 include_directories("${CMAKE_SOURCE_DIR}/python")
 
-file (GLOB SOURCE_FILES "${IVP_PYTHON_DIR}/cpp/src/*.cpp")
-file (GLOB HEADER_FILES "${IVP_PYTHON_DIR}/cpp/include/automobile_bits/*.hpp")
-file (GLOB PYTHON_FILES "${IVP_PYTHON_DIR}/pybind11/*.cpp")
+file (GLOB SOURCE_FILES "${IVP_PYTHON_DIR}/example/cpp/src/*.cpp")
+file (GLOB HEADER_FILES "${IVP_PYTHON_DIR}/example/cpp/include/automobile_bits/*.hpp")
+file (GLOB PYTHON_FILES "${IVP_PYTHON_DIR}/example/pybind11/*.cpp")
 
 
 find_package(pybind11 REQUIRED)
