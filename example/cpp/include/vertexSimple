@@ -1,0 +1,6 @@
+#ifndef VERTEX_LIBRARY_H
+#define VERTEX_LIBRARY_H
+
+#include "vertexSimple_bits/VertexSimple.hpp"
+
+#endif
