@@ -4,14 +4,14 @@
  /*----------------------------------------------------------------------*/
 
  #include <sstream>
- #include "VertexSimple.h"
+ #include "../include/vertexSimple_bits/VertexSimple.h"
 
  using namespace std;
 
  //-----------------------------------------------------------------------
  // Procedure: getSpec()
 
- string VertexSimple::getSpec() const
+ string VertexSimple::getSpec()
  {
    stringstream ss;
    ss << "x=" << m_x << ",y=" << m_y;
@@ -29,4 +29,4 @@
    int range = max - min;
    m_x = (rand() % range) + min;
    m_y = (rand() % range) + min;
- }s
+ }

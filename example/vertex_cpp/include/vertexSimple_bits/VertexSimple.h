@@ -10,10 +10,10 @@
 class VertexSimple {
  public:
   VertexSimple() {m_x=0; m_y=0;};
-  ~VertexSimple() {};
+  //~VertexSimple() {};
   void setRandom(int min, int max);
 
-  std::string getSpec() const;
+  std::string getSpec();
 
   protected:  
    int m_x;

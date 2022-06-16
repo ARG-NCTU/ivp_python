@@ -18,8 +18,8 @@ set(PROJECT_INCLUDE_DIR "include/vertexSimple_bits")
 
 # Source files
 set(SOURCE_FILES
-    ${PROJECT_INCLUDE_DIR}/vertexSimple.h
-    ${PROJECT_SOURCE_DIR}/vertexSimple.cpp
+    ${PROJECT_INCLUDE_DIR}/VertexSimple.h
+    ${PROJECT_SOURCE_DIR}/VertexSimple.cpp
 )
 
 # Set up such that XCode organizes the files correctly
